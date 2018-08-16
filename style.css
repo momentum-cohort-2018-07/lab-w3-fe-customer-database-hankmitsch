@@ -1,0 +1,31 @@
+.title{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    margin-top: 10px;
+}
+
+.wrapBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: rgb(221, 221, 221);
+}
+
+.customerBlock {
+    flex: 0 1 400px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.customerHeadshot {
+    margin: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
