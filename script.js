@@ -43,24 +43,30 @@ class Customer {
     for (var i = 0; i<customers.length; i++){
     customerArray.push(new Customer(customers[i]))
     }
-
     let wrapBox = document.createElement('div')
+    wrapBox.classList.add('wrapBox')
     let body = document.getElementsByTagName('body')
+    let title = document.createElement('h1')
+    title.classList.add('title')
+    body[0].appendChild(title)
     body[0].appendChild(wrapBox)
+   
+    title.innerHTML = "Customer List"
     for (var i = 0; i<customerArray.length; i++){
         let customerBlock = document.createElement('div')
+        customerBlock.classList.add('customerBlock')
         customerBlock.innerHTML =
-        "<img src="+customerArray[i].getHeadshot()+">"
-        +"<div>"+customerArray[i].getName()+"</div>"
-        +"<div>"+customerArray[i].getEmail()+"</div>"
-        +"<div>"+customerArray[i].getAddress()+"</div>"
-        +"<div>"+customerArray[i].getAddress2()+"</div>"
-        +"<div>"+customerArray[i].getDOB()+"</div>"
-        +"<div>"+customerArray[i].getRegistration()+"</div>"
+        "<img class='customerHeadshot' src="+customerArray[i].getHeadshot()+">"
+        +"<div class='customerName'>"+customerArray[i].getName()+"</div>"
+        +"<div class='customerEmail'>"+customerArray[i].getEmail()+"</div>"
+        +"<div class='customerAddress'>"+customerArray[i].getAddress()+"</div>"
+        +"<div class='customerAddress2'>"+customerArray[i].getAddress2()+"</div>"
+        +"<div class='customerDOB'>"+customerArray[i].getDOB()+"</div>"
+        +"<div class='customerRegistration'>"+customerArray[i].getRegistration()+"</div>"
         wrapBox.appendChild(customerBlock)
     }
-wrapBox.style.display = "flex"
-wrapBox.style.flexWrap = "wrap"
+// wrapBox.style.display = "flex"
+// wrapBox.style.flexWrap = "wrap"
 
 
 
