@@ -11,7 +11,7 @@ class Customer {
         this.name = tC(person.name.first) + " " + tC(person.name.last);
         this.email = person.email;
         this.address = person.location.street;
-        this.address2 = person.location.city + ", " + person.location.state + ' ' + person.location.postcode;
+        this.address2 = tC(person.location.city) + ", " + tC(person.location.state) + ' ' + person.location.postcode;
         this.dob = moment(person.dob).format("MMM Do YYYY");
         this.registration = moment(person.registered).format("MMM Do YYYY");
 
@@ -59,6 +59,11 @@ class Customer {
         +"<div>"+customerArray[i].getRegistration()+"</div>"
         wrapBox.appendChild(customerBlock)
     }
-      
-    wrapBox.style.display = "flex"
-    wrapBox.style.flexWrap = "wrap"
+wrapBox.style.display = "flex"
+wrapBox.style.flexWrap = "wrap"
+
+
+
+
+   
+   
